@@ -74,10 +74,6 @@ export const cva =
     const propsWithoutUndefined =
       props &&
       Object.entries(props).reduce((acc, [key, value]) => {
-        if (value === undefined) {
-          return acc;
-        }
-
         acc[key] = value;
         return acc;
       }, {} as Record<string, unknown>);
